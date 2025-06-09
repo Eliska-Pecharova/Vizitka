@@ -1,0 +1,67 @@
+:root {
+  --bc-color: rgb(221, 157, 239);
+  --text-color: #000;
+  --title-color: rgb(76, 12, 76);
+  --border-color: rgb(210, 57, 210);
+}
+
+body {
+  background-color: var(--bc-color);
+  font-family: "Embed code", Arial;
+  border: 5px solid var(--border-color);
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--title-color);
+}
+.profile {
+  width: 200px;
+  height: 200px;
+  border: 3px solid var(--border-color);
+  border-radius: 10px;
+  background-color: white;
+}
+p {
+  font-size: 20px;
+  margin: 10px 10px;
+}
+ol {
+  margin-bottom: 30px;
+}
+li {
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+h2 {
+  text-decoration-line: underline;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  text-align: center;
+  justify-content: center;
+}
+.icon {
+  display: flex;
+}
+.icon h3 {
+  font-size: 18px;
+  margin-left: 10px;
+}
+img {
+  width: 50px;
+  height: 50px;
+}
