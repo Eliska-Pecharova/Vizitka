@@ -3,65 +3,125 @@
   --text-color: #000;
   --title-color: rgb(76, 12, 76);
   --border-color: rgb(210, 57, 210);
+  --card-bg: rgba(255, 255, 255, 0.8);
 }
 
 body {
   background-color: var(--bc-color);
-  font-family: "Embed code", Arial;
-  border: 5px solid var(--border-color);
-  border-radius: 10px;
-  display: inline-block;
+  font-family: "Roboto", "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  background-color: var(--card-bg);
+  border: 3px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: center;
-  justify-content: center;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   color: var(--title-color);
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 10px;
 }
+
 .profile {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border: 3px solid var(--border-color);
-  border-radius: 10px;
-  background-color: white;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
+
 p {
-  font-size: 20px;
-  margin: 10px 10px;
+  font-size: 18px;
+  margin: 10px 0;
 }
+
 ol {
-  margin-bottom: 30px;
+  padding-left: 0;
+  margin: 20px 0;
 }
+
 li {
   list-style: none;
-  font-size: 18px;
-  line-height: 1.5em;
+  font-size: 16px;
+  line-height: 1.6em;
 }
+
 h2 {
-  text-decoration-line: underline;
+  font-size: 22px;
+  color: var(--title-color);
+  margin-bottom: 20px;
+  text-decoration: underline;
 }
-.contact {
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.icon {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.icons {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
-  text-align: center;
-  justify-content: center;
+
+.icon img {
+  width: 32px;
+  height: 32px;
 }
-.icon {
-  display: flex;
-}
+
 .icon h3 {
-  font-size: 18px;
+  font-size: 16px;
   margin-left: 10px;
+  font-weight: normal;
 }
-img {
-  width: 50px;
-  height: 50px;
+
+/* 📱 Responsive for small screens */
+@media (max-width: 500px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .profile {
+    width: 140px;
+    height: 140px;
+  }
+
+  p,
+  li,
+  h3 {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .icon img {
+    width: 28px;
+    height: 28px;
+  }
 }
