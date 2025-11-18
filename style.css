@@ -16,16 +16,49 @@ body {
   align-items: center;
 }
 
-section {
+.Info-Card {
+  width: 100%;
+  max-width: 500px;
+  height: 700px;
+  perspective: 1000px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+/* Otočení při hoveru */
+.Info-Card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   background-color: var(--card-bg);
   border: 3px solid var(--border-color);
   border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 30px;
-  width: 100%;
-  max-width: 500px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+}
+
+/* Přední strana */
+.flip-card-front {
+  color: var(--text-color);
 }
 
 h1 {
@@ -53,12 +86,53 @@ p {
 ol {
   padding-left: 0;
   margin: 20px 0;
+  margin-bottom: 50px;
 }
 
 li {
   list-style: none;
   font-size: 16px;
   line-height: 1.6em;
+}
+
+.arrow-circle-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.arrow-turn-around {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  z-index: 2;
+}
+
+.text-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.text-circle text {
+  font-family: "Handlee", cursive;
+  font-weight: bold;
+  font-size: 24px;
+  fill: var(--title-color);
+  letter-spacing: 2px;
+}
+
+/* Zadní strana */
+.flip-card-back {
+  transform: rotateY(180deg);
+  color: var(--title-color);
 }
 
 h2 {
