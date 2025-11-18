@@ -1,0 +1,55 @@
+@media (max-width: 500px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .Info-Card {
+    width: 100%;
+    max-width: 400px;
+    height: 700px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .profile {
+    width: 140px;
+    height: 140px;
+  }
+
+  p,
+  li,
+  h3 {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .icon img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .arrow-circle-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .text-circle {
+    width: 100%;
+    height: 100%;
+  }
+
+  .text-circle text {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  .arrow-turn-around {
+    width: 24px;
+    height: 24px;
+  }
+}
